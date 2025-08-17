@@ -1,0 +1,8 @@
+.external-style {
+      color: navy;
+      background-color: lightgray;
+      font-size: 20px;
+      padding: 12px;
+      margin: 12px;
+      border: 2px dashed purple;
+    }

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Class Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h2 {
+      margin-top: 40px;
+      color: darkblue;
+    }
+
+    /* -------- Responsive Units -------- */
+    .responsive {
+      background: lightyellow;
+      padding: 2vw; /* viewport-based unit */
+      font-size: 2vh; /* text changes with screen height */
+      border: 2px solid orange;
+    }
+
+    /* -------- Flexbox -------- */
+    .flexbox {
+      display: flex;
+      justify-content: space-around;
+      background: lightcyan;
+      padding: 20px;
+    }
+    .flexbox div {
+      background: lightseagreen;
+      color: white;
+      padding: 20px;
+      margin: 5px;
+      flex: 1; /* make them flexible */
+      text-align: center;
+    }
+
+    /* -------- Grid -------- */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      background: lavender;
+      padding: 20px;
+    }
+    .grid div {
+      background: purple;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .second-element {
+  grid-row: span 2;
+}
+
+    /* -------- Pseudo-classes -------- */
+    .button {
+      background: steelblue;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .button:hover {
+      background: darkblue; /* when mouse is over */
+    }
+    .button:active {
+      background: red; /* when clicked */
+    }
+
+    
+  </style>
+</head>
+<body>
+
+  <h1>🌟 Today's CSS Topics</h1>
+
+  <h2>1. Responsive Units</h2>
+  <div class="responsive">
+    Resize the browser to see me change size! (Uses vw & vh)
+  </div>
+
+  <h2>2. Flexbox</h2>
+  <div class="flexbox">
+    <div>Box 1</div>
+    <div>Box 2</div>
+    <div>Box 3</div>
+  </div>
+  <p>Flexbox arranges items in a row/column easily, and can distribute space.</p>
+
+  <h2>3. Grid</h2>
+  <div class="grid">
+  <div>1</div>
+  <div class="second-element">2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+  </div>
+  <p>Grid helps in making layouts like a table but much more powerful.</p>
+
+  <h2>4. Pseudo-classes</h2>
+  <a href="#" class="button">Hover / Click Me</a>
+  <p>Hover changes color, click shows active state.</p>
+
+  
+
+</body>
+</html>
