@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Demo: Overflow, Shadows, and Gradients</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #83a4d4, #b6fbff);
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      text-shadow: 2px 2px 5px blue;
+      
+    }
+
+    .section {
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(100,0,0,0.3);
+      background: white;
+    }
+
+    .overflow-box {
+      width: 200px;
+      height: 100px;
+      margin: 10px;
+      padding: 10px;
+      border: 2px solid #333;
+      background: radial-gradient(circle, #fbc2eb, #a6c1ee);
+    }
+
+    .visible { overflow: visible; }
+    .hidden { overflow: hidden; }
+    .scroll { overflow: scroll; }
+    .auto { overflow: auto; }
+
+    .gradient-demo {
+      margin-top: 20px;
+      padding: 20px;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      width: 300px;
+      height: 400px;
+    }
+
+    .linear {
+      background: linear-gradient(to left, #ff7e5f, #feb47b, blue);
+    }
+
+    .radial {
+      background: radial-gradient(circle, #43cea2, #185a9d, brown);
+    }
+    .shadow {
+      
+      box-shadow: 0 20px 20px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Demo: Overflow, Shadows & Gradients</h1>
+
+  <div class="section">
+    <h2>1. Overflow Examples</h2>
+    <div class="overflow-box visible">
+      <b>Overflow: visible</b>  
+      This content is long and will overflow outside the box without being clipped or hidden.
+      
+    </div>
+    <div class="overflow-box hidden">
+      <b>Overflow: hidden</b>  
+      This content is long and will be hidden if it exceeds the box size.
+      This content is long and will be hidden if it exceeds the box size.
+      This content is long and will be hidden if it exceeds the box size.
+    </div>
+    <div class="overflow-box scroll">
+      <b>Overflow: scroll</b>  
+      This content is long and you will see scrollbars always appear, even if not needed.
+       This content is long and will be hidden if it exceeds the box size.
+    </div>
+    <div class="overflow-box auto">
+      <b>Overflow: auto</b>  
+      This content is long and scrollbars appear only when necessary.
+      This content is long and scrollbars appear only when necessary.
+      This content is long and scrollbars appear only when necessary.
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>2. Gradient and Shadow Examples</h2>
+    <p style="text-shadow: 3px 3px 6px #888;">
+      This is a text with <b>shadow effect</b>.
+    </p>
+    <div class="gradient-demo linear">
+      Linear Gradient Background
+    </div>
+    <div class="gradient-demo radial">
+      Radial Gradient Background
+    </div>
+  </div>
+<div class="shadow">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe odit minus repudiandae voluptatem non accusamus sequi enim nisi. Minima totam labore a expedita delectus tempora quos? Explicabo eligendi fugit porro.</p>
+  <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime suscipit veniam, numquam eaque perspiciatis sunt, ducimus voluptates alias itaque assumenda, tempore ut nam ab illum autem dicta. Ea, harum nobis.</h1>
+  </div>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Concepts Demo</title>
+  <style>
+    /* ----------- 1) POSITIONING ----------- */
+    .relative-box {
+      position: relative; /* Moves relative to its normal position */
+      left: 30px;
+      background: lightblue;
+      padding: 10px;
+    }
+
+    .absolute-box {
+      position: absolute; /* Moves relative to nearest positioned ancestor */
+      top: 50px;
+      left: 50px;
+      background: lightcoral;
+      padding: 10px;
+    }
+
+    .fixed-box {
+      position: fixed; /* Stays fixed on screen */
+      bottom: 10px;
+      right: 10px;
+      background: lightgreen;
+      padding: 10px;
+    }
+
+    /* ----------- 2) ANIMATIONS ----------- */
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      20% { transform: translateY(-30px); }
+    }
+    .bounce {
+      display: inline-block;
+      animation: bounce 1s infinite;
+      background: orange;
+      padding: 10px;
+    }
+
+    @keyframes fade {
+      from { opacity: 1; }
+      to { opacity: 0; }
+    }
+    .fade {
+      display: inline-block;
+      animation: fade 3s infinite alternate;
+      background: violet;
+      padding: 10px;
+    }
+
+    @keyframes rotate {
+      from { transform: rotate(360deg); }
+      to { transform: rotate(0deg); }
+    }
+    .rotate {
+      display: inline-block;
+      animation: rotate 2s linear infinite;
+      background: skyblue;
+      padding: 10px;
+    }
+
+    /* ----------- 3) TRANSITIONS ----------- */
+    .transition1 {
+      width: 100px;
+      height: 100px;
+      background: red;
+      transition: background 0.5s; /* smooth color change */
+    }
+    .transition1:hover {
+      background: yellow;
+    }
+
+    .transition2 {
+      width: 100px;
+      height: 100px;
+      background: blue;
+      transition: transform 0.5s; /* smooth movement */
+    }
+    .transition2:hover {
+      transform: translateX(-50px);
+    }
+
+    .transition3 {
+      width: 100px;
+      height: 100px;
+      background: green;
+      transition: transform 0.5s ease-in-out; /* smooth scaling */
+    }
+    .transition3:hover {
+      transform: scale(0.5);
+    }
+
+    /* ----------- 4) FONTS ----------- */
+    .professional {
+      font-family: "Times New Roman", serif;
+      font-size: 20px;
+    }
+    .playful {
+      font-family: "Comic Sans MS", cursive;
+      font-size: 20px;
+    }
+    .elegant {
+      font-family: "Georgia", serif;
+      font-style: italic;
+      font-size: 20px;
+    }
+    .techy {
+      font-family: "Courier New", monospace;
+      font-size: 20px;
+    }
+
+    /* ----------- 5) Z-INDEX STACKING ----------- */
+    .stack-container {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      border: 1px solid black;
+      margin-top: 20px;
+    }
+    .box1, .box2, .box3 {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+    }
+    .box1 {
+      background: red;
+      top: 20px; left: 20px;
+      z-index: -1; /* lowest */
+    }
+    .box2 {
+      background: blue;
+      top: 40px; left: 40px;
+      z-index: -2; /* middle */
+    }
+    .box3 {
+      background: green;
+      top: 60px; left: 60px;
+      z-index: -3; /* highest */
+    }
+  </style>
+</head>
+<body>
+
+  <h2>1) Positioning Example</h2>
+  <div class="absolute-box">Absolute Box</div>
+  <div class="relative-box">Relative Box</div>
+  
+  <div class="fixed-box">Fixed Box (always visible)</div>
+
+  <h2>2) Animations</h2>
+  <div class="bounce">Bounce</div>
+  <div class="fade">Fade</div>
+  <div class="rotate">Rotate</div>
+  <p>
+    Bounce: Moves up & down repeatedly.<br>
+    Fade: Smoothly changes from invisible to visible.<br>
+    Rotate: Spins continuously in a circle.
+  </p>
+
+  <h2>3) Transitions</h2>
+  <div class="transition1"></div>
+  <div class="transition2"></div>
+  <div class="transition3"></div>
+  <p>
+    Transition 1: Changes color smoothly on hover.<br>
+    Transition 2: Moves to the right when hovered.<br>
+    Transition 3: Enlarges when hovered.
+  </p>
+
+  <h2>4) Fonts</h2>
+  <p class="professional">Professional Situation: "This is a formal report."</p>
+  <p class="playful">Playful Situation: "Let’s have some fun!"</p>
+  <p class="elegant">Elegant Situation: "Welcome to the grand evening."</p>
+  <p class="techy">Techy Situation: "System.out.println('Hello World');"</p>
+
+  <h2>5) Z-Index Stacking</h2>
+  <div class="stack-container">
+    <div class="box1">Red</div>
+    <div class="box2">Blue</div>
+    <div class="box3">Green</div>
+  </div>
+  <p>
+    The red box has z-index 1 (lowest), blue has 2 (middle), and green has 3 (highest), so they stack in that order.
+  </p>
+
+</body>
+</html>
